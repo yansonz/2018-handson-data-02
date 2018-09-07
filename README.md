@@ -220,6 +220,13 @@ SageMaker Examples 탭에 install_r_kernel.ipynb 노트북을 열어서 R Kernel
 cd ~/Sagemaker
 git clone https://github.com/yansonz/2018-handson-data-02.git
 ```
+
+#### R Package 설치하기
+실습에 필요한 R Package 들을 설치합니다. 터미널 상에서 아래 명령을 수행합니다.
+```
+R -e "install.packages(c('aws.signature', 'aws.s3', 'tree', 'colorspace'), repos='https://cloud.r-project.org')"
+```
+
 #### Credentials 설정하기
 수행 중간 산출물들을 S3에 업로드를 위해 AWS Credential 정보를 설정합니다. 체크아웃 받은 소스코드 폴더 내에 credentials 라는 파일을 만들고 아래와 같이 정보를 입력합니다.
 
