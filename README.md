@@ -194,7 +194,7 @@ Jupyter 노트북 인스턴스 생성하기
 
 SageMaker Examples 탭에 install_r_kernel.ipynb 노트북을 열어서 R Kernel 인스톨을 진행합니다. SameMaker Examples에는 AWS Sagemaker를 이용한 다양한 활용 예제가 있으니 꼭 활용해 보세요.
 
-![image-sm10](images/image-sm10.png)
+<img width="400">![image-sm10](images/image-sm10.png)</img>
 
 [그림8] R Kernel 설치하기1
 
