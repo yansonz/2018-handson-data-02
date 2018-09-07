@@ -281,7 +281,10 @@ RGB의 색상값을 Lab로 변경하기 위해 r-classification-colour.ipynb 파
 *. 엔드포인트 구성삭제
 *. 모델 삭제
 *. 노트북 인스턴스 삭제
+*. S3에서 생성한 "sagemaker-handson-2버킷을 삭제
+*. CloudWatch 콘솔에서 이름이 /aws/sagemaker/로 시작하는 모든 로그 그룹을 삭제
+*. IAM 콘솔에서 AmazonSageMaker-* 역할을 삭제
 
 ![image-sm16](images/image-sm16.png)
 
-[그림16] 생성된 엔드포인트 정보
+[그림16] Amazon Sagemaker 콘솔에서 리소스 삭제
