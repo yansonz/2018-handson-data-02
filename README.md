@@ -149,7 +149,7 @@ AWS에서 사용하는 리소스는 다음과 같습니다.
 
 ### 모델링
 #### Amazon Sagemaker 시작하기
-* Amazon Sagemaker 살펴보기
+Amazon Sagemaker는 아래와 같이 구성되어 있습니다.
   1. 대시보드
   1. 노트북
   1. 교육
@@ -161,7 +161,7 @@ AWS에서 사용하는 리소스는 다음과 같습니다.
 
 [그림4] Amazon Sagemaker 메인화면
 
-* Jupyter 노트북 인스턴스 생성하기
+Jupyter 노트북 인스턴스 생성하기
 노트북 인스턴스를 생성합니다. 왼쪽 탭에 노트북 인스턴스 메뉴로 들어가서 노트북 인스턴스 생성 버튼을 클릭 합니다.
 
 ![image-sm07](images/image-sm07.png)
@@ -202,16 +202,16 @@ SageMaker Examples 탭에 install_r_kernel.ipynb 노트북을 열어서 R Kernel
 
 [그림9] R Kernel 설치하기2
 
-설치가 완료되면 페이지 리프레시가 필요합니다. 페이지 리프레시 후에 새로운 노트북을 생성을 시도해보면 설치 이전에 보이지 않던 R 마크의 노트북이 보입니다.
+설치가 완료되면 페이지 리프레시가 필요합니다. 페이지 리프레시 후에 새로운 노트북을 생성을 시도해보면 설치 이전에 보이지 않던 R마크가 있는 노트북이 보입니다.
 
-![image-sm12](images/image-sm12.png)
+![image-sm12](images/image-sm12.png =300x)
 
 [그림10] R Kernel 설치하기3
 
 #### 코드 저장소 체크아웃
 새로운 터미널을 실행 소스코드를 생성합니다.
 
-![image-sm13](images/image-sm13.png)
+![image-sm13](images/image-sm13.png =300x)
 
 [그림11] 터미널 실행
 
@@ -270,10 +270,10 @@ RGB의 색상값을 Lab로 변경하기 위해 r-classification-colour.ipynb 파
 [그림13] 생성된 엔드포인트 정보
 
 ## 리소스 삭제하기
-1. 엔드포인트 삭제
-2. 엔드포인트 구성삭제
-3. 모델 삭제
-4. 노트북 인스턴스 삭제
+*. 엔드포인트 삭제
+*. 엔드포인트 구성삭제
+*. 모델 삭제
+*. 노트북 인스턴스 삭제
 
 ![image-sm16](images/image-sm16.png)
 
