@@ -19,7 +19,7 @@ prefix = "/opt/ml"
 bucket.name = "sagemaker-handson-2"
 model.folder = "model"
 
-use_credentials(profile = "yanso", file = file.path(prefix, "credentials"))
+use_credentials(profile = "handson2", file = file.path(prefix, "credentials"))
 
 # Save model file in S3 to local project
 save_object("model.tar.gz", file = "model.tar.gz", bucket = file.path(bucket.name, model.folder))
