@@ -171,7 +171,7 @@ Jupyter 노트북 인스턴스 생성하기
 런칭 할 노트북 인스턴스의 상세 설정이 가능합니다. 이번 세션에서는 모두 기본 값을 사용할 예정이지만, 향후에 자신의 연구나 현업에서 작업내용, 환경에 따라서 구성해주시면 됩니다. 예를들면 이미지 분석/학습을 위해서는 GPU 리소스를 사용하는것을 권장하는데, 이럴 경우에는 노트북 인스턴스 유형을 p2 시리즈로 선택합니다.
 
 아래와 같이 설정 후 노트북 인스턴스 생성 버튼을 클릭합니다.
-  1. 노트북 인스턴스 이름을 <username>-hadnson-2 로 합니다.
+  1. 노트북 인스턴스 이름을 {username}-hadnson-2 로 합니다.
   2. IAM 역할을 생성합니다. 생성 할 때 지정하는 S3 버킷 이름의 특정 S3 버킷을 없음으로 변경합니다.
 
 ![image-sm08](images/image-sm08.png)
@@ -194,7 +194,7 @@ Jupyter 노트북 인스턴스 생성하기
 
 SageMaker Examples 탭에 install_r_kernel.ipynb 노트북을 열어서 R Kernel 인스톨을 진행합니다. SameMaker Examples에는 AWS Sagemaker를 이용한 다양한 활용 예제가 있으니 꼭 활용해 보세요.
 
-<img width="400">![image-sm10](images/image-sm10.png)</img>
+![image-sm10](images/image-sm10.png)
 
 [그림8] R Kernel 설치하기1
 
