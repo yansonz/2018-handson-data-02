@@ -204,14 +204,14 @@ SageMaker Examples 탭에 install_r_kernel.ipynb 노트북을 열어서 R Kernel
 
 설치가 완료되면 페이지 리프레시가 필요합니다. 페이지 리프레시 후에 새로운 노트북을 생성을 시도해보면 설치 이전에 보이지 않던 R마크가 있는 노트북이 보입니다.
 
-![image-sm12](images/image-sm12.png =300x)
+![image-sm12](images/image-sm12.png)
 
 [그림10] R Kernel 설치하기3
 
 #### 코드 저장소 체크아웃
 새로운 터미널을 실행 소스코드를 생성합니다.
 
-![image-sm13](images/image-sm13.png =300x)
+![image-sm13](images/image-sm13.png)
 
 [그림11] 터미널 실행
 
