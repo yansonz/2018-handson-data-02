@@ -240,7 +240,7 @@ aws_default_region = ap-northeast-2
 ```
 
 #### 모델 만들기
-[r-classification-colour.ipynb](r-classification-colour.ipynb) 노트북을 열어서 코드 블록을 실행합니다.
+[r-model-classification-colour.ipynb](r-model-classification-colour.ipynb) 노트북을 열어서 코드 블록을 실행합니다.
 
 #### 모델 개선하기
 인간의 색 지각이 비선형이라는 연구 결과에 따라, Lab 색 공간은 실제 빛의 파장과 비선형적 관계를 갖습니다. 또한 Lab 공간에서 서로 다른 두 색의 거리는 인간이 느끼는 색깔의 차이와 비례하도록 설계되었다고 합니다. Lab 색상공간은 각각 
@@ -255,7 +255,7 @@ b: 노랑-파랑
 * [CIELAB 색상공간](https://ko.wikipedia.org/wiki/CIELAB_%EC%83%89_%EA%B3%B5%EA%B0%84)
 * 색의 연속성 https://www.w3schools.com/colors/colors_picker.asp
 
-RGB의 색상값을 Lab로 변경하기 위해 [r-classification-colour.ipynb](r-classification-colour.ipynb) 파일 내에 아래 주석처리를 해제후에 다시 모든 코드 블록을 수행합니다.
+RGB의 색상값을 Lab로 변경하기 위해 [r-model-classification-colour.ipynb](r-model-classification-colour.ipynb) 파일 내에 아래 주석처리를 해제후에 다시 모든 코드 블록을 수행합니다.
 ```
 # col.type = "lab"
 # lab = as(RGB(dat[, "R"]/255, dat[, "G"]/255, dat[, "B"]/255), "LAB")
