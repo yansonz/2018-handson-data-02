@@ -34,19 +34,22 @@ AWS에서 사용하는 리소스는 다음과 같습니다.
 
 그림2. 제품 색상 카테고리를 이용한 필터
 
+![image-sm04](/images/image-sm04.png)
+그림3. 파..란색?
+
 ### 데이터 수집/분석
 #### 이미지 수집
 환경 제약으로 상품이미지를 직접 제공하지 않고, 해당 이미지들로부터 추출 된 RGB값을 정리한 csv 파일을 제공합니다.
 
 #### 이미지에서 대표생상 추출하기
-이미지/영상 분석을 위해 많은 Vision API 서비스들이 존재합니다. 이번 핸즈온 세션에서는 상품이미지로부터 대표색상을 추출하기 위해 Google Vision API를 이용하였습니다. 이미지 분석 결과를 아래의 예제와 같이 JSON 형태로 제공하는데, 색상정보는 "imagePropertiesAnnotation" > "dominantColors" 키 정보를 확인합니다. Google Vision API는 기본적인 이미지의 속성값들 이외에 이미지내에 텍스트 검출이나 사물 인식, 안면 인식 등 다양한 기능들을 제공합니다.
+이미지/영상 분석을 위해 많은 Vision API 서비스들이 존재합니다. 이번 핸즈온 세션에서는 상품이미지로부터 대표색상을 추출하기 위해 Google Vision API를 이용하였습니다. 이미지 분석 결과를 아래의 예제와 같이 JSON 형태로 제공하는데, 색상정보는 "imagePropertiesAnnotation":"dominantColors" 키 정보를 확인합니다. Google Vision API는 기본적인 이미지의 속성값들 이외에 이미지내에 텍스트 검출이나 사물 인식, 안면 인식 등 다양한 기능들을 제공합니다.
 
 * Google Vision API: https://cloud.google.com/vision/
 * Reference: [Google Vision API on AWS serverless Architecture](https://github.com/ramhiser/serverless-cloud-vision)
 
 ![image-sm02](/images/image-sm05.png)
 
-그림3. Google Vison API 서비스 결과
+그림4. Google Vison API 서비스 결과
 
 ```
 "imagePropertiesAnnotation": {
@@ -159,16 +162,16 @@ Amazon Sagemaker는 아래와 같이 구성되어 있습니다.
 
 ![image-sm06](images/image-sm06.png)
 
-[그림4] Amazon Sagemaker 메인화면
+[그림5] Amazon Sagemaker 메인화면
 
 Jupyter 노트북 인스턴스 생성하기
 노트북 인스턴스를 생성합니다. 왼쪽 탭에 노트북 인스턴스 메뉴로 들어가서 노트북 인스턴스 생성 버튼을 클릭 합니다.
 
 ![image-sm07](images/image-sm07.png)
 
-[그림5] 노트북 인스턴스 생성하기
+[그림6] 노트북 인스턴스 생성하기
 
-런칭 할 노트북 인스턴스의 상세 설정이 가능합니다. 이번 세션에서는 모두 기본 값을 사용할 예정이지만, 향후에 자신의 연구나 현업에서 작업내용, 환경에 따라서 구성해주시면 됩니다. 예를들면 이미지 분석/학습을 위해서는 GPU 리소스를 사용하는것을 권장하는데, 이럴 경우에는 노트북 인스턴스 유형을 p2 시리즈로 선택합니다.
+런칭 할 노트북 인스턴스의 상세 설정이 가능합니다. 이번 세션에서는 모두 기본 값을 사용할 예정이지만, 향후에 자신의 연구나 현업에서 작업내용, 환경에 따라서 구성해주시면 됩니다. 노트북 인스턴스의 경우는 많은 컴퓨팅 파워가 필요하지 않습니다. 하지만 훈련을 위한 인스턴스, 특히 이미지 분석/학습을 위해서는 GPU 리소스를 사용하는것을 권장하는데, 이럴 경우에는 인스턴스 유형을 p2 시리즈로 선택합니다. (이번 핸즈온에서는 훈련을 위한 잡을 생성하진 않습니다)
 
 아래와 같이 설정 후 노트북 인스턴스 생성 버튼을 클릭합니다.
   1. 노트북 인스턴스 이름을 {username}-hadnson-2 로 합니다.
@@ -176,7 +179,7 @@ Jupyter 노트북 인스턴스 생성하기
 
 ![image-sm08](images/image-sm08.png)
 
-[그림6] 노트북 인스턴스 설정하기
+[그림7] 노트북 인스턴스 설정하기
 
 노트북 인스턴스 생성까지 1-2분정도 시간이 걸립니다.
 
@@ -184,7 +187,7 @@ Jupyter 노트북 인스턴스 생성하기
 
 ![image-sm09](images/image-sm09.png)
 
-[그림7] ECR 정책 추가하기
+[그림8] ECR 정책 추가하기
 
 노트북 인스턴스가 생성 완료되면, 이제부터 Jupyer Notebook 환경에서 작업을 시작합니다. 
 
@@ -195,24 +198,24 @@ SageMaker Examples 탭에 install_r_kernel.ipynb 노트북을 열어서 R Kernel
 
 ![image-sm10](images/image-sm10.png)
 
-[그림8] R Kernel 설치하기1
+[그림9] R Kernel 설치하기1
 
 ![image-sm11](images/image-sm11.png)
 
-[그림9] R Kernel 설치하기2
+[그림10] R Kernel 설치하기2
 해당 노트북의 코드블럭을 수행하면 R을 이용하기 위한 파일들을 다운받고 설치합니다. 설치완료까지 5분정도 소요 됩니다.
 설치가 완료되면 첫 페이지인 대시보드로 돌아가서 페이지 리프레시를 해야합니다. 리프레시 후에 새로운 노트북을 생성을 시도해보면 설치 이전에 보이지 않던 R마크가 있는 노트북이 보입니다.
 
 ![image-sm12](images/image-sm12.png)
 
-[그림10] R Kernel 설치하기3
+[그림11] R Kernel 설치하기3
 
 #### 코드 저장소 체크아웃
 새로운 터미널을 실행 소스코드를 생성합니다.
 
 ![image-sm13](images/image-sm13.png)
 
-[그림11] 터미널 실행
+[그림12] 터미널 실행
 
 실습을 위한 데이터와 노트북을 ~/Sagemaker 폴더 안에서 생성합니다.
 ```
@@ -269,11 +272,11 @@ RGB의 색상값을 Lab로 변경하기 위해 [r-model-classification-colour.ip
 
 ![image-sm14](images/image-sm14.png)
 
-[그림12] 엔드포인트 생성 확인
+[그림13] 엔드포인트 생성 확인
 
 ![image-sm15](images/image-sm15.png)
 
-[그림13] 생성된 엔드포인트 정보
+[그림14] 생성된 엔드포인트 정보
 
 ## 리소스 삭제하기
 * 엔드포인트 삭제
@@ -286,4 +289,4 @@ RGB의 색상값을 Lab로 변경하기 위해 [r-model-classification-colour.ip
 
 ![image-sm16](images/image-sm16.png)
 
-[그림16] Amazon Sagemaker 콘솔에서 리소스 삭제
+[그림15] Amazon Sagemaker 콘솔에서 리소스 삭제
