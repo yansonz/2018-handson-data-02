@@ -176,7 +176,7 @@ Jupyter 노트북 인스턴스 생성하기
 아래와 같이 설정 후 노트북 인스턴스 생성 버튼을 클릭합니다.
   1. 노트북 인스턴스 이름을 {username}-hadnson-2 로 합니다.
   2. IAM 역할을 생성합니다. 생성 할 때 지정하는 S3 버킷 이름의 특정 S3 버킷을 없음으로 변경합니다.
-
+  
 ![image-sm08](images/image-sm08.png)
 
 [그림7] 노트북 인스턴스 설정하기
@@ -241,6 +241,12 @@ aws_access_key_id = xxxx
 aws_secret_access_key = yyyy
 aws_default_region = ap-northeast-2
 ```
+
+Access Key와 Secret Key는 IAM 에서 확인 가능합니다.
+![image-sm17](images/image-sm17.png)
+![image-sm18](images/image-sm18.png)
+![image-sm19](images/image-sm19.png)
+![image-sm20](images/image-sm20.png)
 
 #### 모델 만들기
 [r-model-classification-colour.ipynb](r-model-classification-colour.ipynb) 노트북을 열어서 코드 블록을 실행합니다.
