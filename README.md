@@ -264,7 +264,7 @@ RGB의 색상값을 Lab로 변경하기 위해 [r-model-classification-colour.ip
 ```
 
 ### 모델 배포하기
-1. sm-classification-colour.ipynb 노트북을 열어서 코드 블록을 실행합니다.
+1. [sm-classification-colour.ipynb](sm-classification-colour.ipynb) 노트북을 열어서 코드 블록을 실행합니다.
 2. 배포하고 Endpoint 정보 확인하기
 
 ![image-sm14](images/image-sm14.png)
