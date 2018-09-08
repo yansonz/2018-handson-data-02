@@ -16,7 +16,7 @@ library(jsonlite)
 # Setup parameters
 # Container directories
 prefix = "/opt/ml"
-bucket.name = "sagemaker-handson-<userid>" # PLESAE REPLACE <userid> with YOURID
+bucket.name = "sagemaker-handson-2-<userid>" # PLESAE REPLACE <userid> with YOURID
 model.folder = "model"
 
 use_credentials(profile = "handson2", file = file.path(prefix, "credentials"))
