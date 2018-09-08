@@ -273,11 +273,10 @@ RGB의 색상값을 Lab로 변경하기 위해 [r-model-classification-colour.ip
 ```
 
 ### 모델 배포하기
-1. 배포할 코드에서 사용할 버켓 이름 지정
+1. 배포할 코드에서 사용할 버켓 이름 변경
     * plumber.R 파일을 열어주세요
     * bucket.name 을 이전에 생성한 버킷이름과 동일하게 변경해주세요
     ![image-sm21](images/image-sm21.png)
-
 1. [sm-classification-colour.ipynb](sm-classification-colour.ipynb) 노트북을 열어서 코드 블록을 실행합니다.
 1. 배포하고 Endpoint 정보 확인하기
 
